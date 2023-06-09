@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 cmake_minimum_required(VERSION 3.16)
-project(painbrash LANGUAGES CXX)
+project(paintbrush LANGUAGES CXX)
 
 find_package(Qt6
     REQUIRED COMPONENTS Core Gui Widgets
@@ -11,18 +11,18 @@ find_package(Qt6
 
 qt_standard_project_setup()
 
-qt_add_executable(painbrash
+qt_add_executable(paintbrush
     main.cpp
     mainwindow.cpp mainwindow.h
     scribblearea.cpp scribblearea.h
 )
 
-set_target_properties(painbrash PROPERTIES
+set_target_properties(paintbrush PROPERTIES
     WIN32_EXECUTABLE TRUE
     MACOSX_BUNDLE TRUE
 )
 
-target_link_libraries(painbrash PRIVATE
+target_link_libraries(paintbrush PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets

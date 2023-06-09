@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     createActions();
     createMenus();
 
-    setWindowTitle(tr("Paintbrash"));
+    setWindowTitle(tr("Paintbrush"));
     resize(500, 500);
 }
 //! [0]
@@ -76,7 +76,7 @@ void MainWindow::penWidth()
 //! [9] //! [10]
 {
     bool ok;
-    int newWidth = QInputDialog::getInt(this, tr("Paintbrash"),
+    int newWidth = QInputDialog::getInt(this, tr("Paintbrush"),
                                         tr("Select pen width:"),
                                         scribbleArea->penWidth(),
                                         1, 50, 1, &ok);
@@ -89,8 +89,8 @@ void MainWindow::penWidth()
 void MainWindow::about()
 //! [11] //! [12]
 {
-    QMessageBox::about(this, tr("About PaintBrash"),
-            tr("PaintBrash example"));
+    QMessageBox::about(this, tr("About Paintbrush"),
+            tr("Paintbrush example"));
 }
 //! [12]
 
@@ -175,7 +175,7 @@ bool MainWindow::maybeSave()
 {
     if (scribbleArea->isModified()) {
        QMessageBox::StandardButton ret;
-       ret = QMessageBox::warning(this, tr("Paintbrash"),
+       ret = QMessageBox::warning(this, tr("Paintbrush"),
                           tr("The image has been modified.\n"
                              "Do you want to save your changes?"),
                           QMessageBox::Save | QMessageBox::Discard
